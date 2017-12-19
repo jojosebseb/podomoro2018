@@ -25,6 +25,11 @@
   box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
+#navbar .desktop-hide {
+  color: white;
+  background: #083f88;
+}
+
 #navbar .top {
   background: #083f88;
 }
@@ -120,7 +125,7 @@
   position: relative;
   padding: 5px 15px 10px;
   display: block;
-  background: #083f88;
+  background: #a1904e;
 }
 
 #navbarSearch .full-input {
