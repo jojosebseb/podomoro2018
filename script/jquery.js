@@ -34,29 +34,55 @@ $('#indexSlider').slick({
 })
 
 
-function mobileSlick(){
-    $('.mobile-slick').slick({
+function mobileSlick(objClass, slidesToShow){
+    $(objClass).slick({
         dots: true,
         arrows: false,
-        infnite: false,
+        infinite: false,
+        slidesToShow: slidesToShow
     });
 };
+
+function mobileSlickNoDots(objClass, slidesToShow){
+    $(objClass).slick({
+        dots: false,
+        arrows: false,
+        infinite: false,
+        slidesToShow: slidesToShow,
+        variableWidth: true,
+        focusOnSelect: true,
+    });
+};
+
+function mobileInit(){
+    $('.mobile-handle').on('click', function(){
+        $(this).toggleClass('active');
+        $('.nav-ul').toggleClass('active');
+        $('.nav-ul > li').find('.submenu').slideUp(300);
+    });
+    $('.nav-ul > li').on('click', function(){
+        $('.nav-ul > li').find('.submenu').slideUp(300);
+        $(this).find('.submenu').slideToggle(300);
+    });
+}
 
 function mobileUnSlick(){
 };
 
 function widthController(){
     if ($(window).width() < 600) {
-        $('.mobile-handle').on('click', function(){
-            $(this).toggleClass('active');
-            $('.nav-ul').toggleClass('active');
-            $('.nav-ul > li').find('.submenu').slideUp(300);
+        mobileInit()
+        //mobile-slicks
+        mobileSlick('.mobile-slick', 1);
+        // mobileSlickNoDots('.prodi-nav', 2);
+
+        $(".prodi-nav").mCustomScrollbar({
+            axis:"x",
+            advanced:{
+                autoExpandHorizontalScroll:true
+            }
         });
-        $('.nav-ul > li').on('click', function(){
-            $('.nav-ul > li').find('.submenu').slideUp(300);
-            $(this).find('.submenu').slideToggle(300);
-        });
-        mobileSlick();
+
     }
     else {
         mobileUnSlick();
@@ -67,5 +93,15 @@ widthController();
 
 $( window ).resize(function() {
     widthController();
-    console.log('asd');
 });
+
+var id, numTgt;
+$('.prodi-nav .choice-module').on('click', function(){
+    $('.prodi-nav .choice-module').removeClass('active');
+    $(this).addClass('active');
+    id = $(this).attr('id');
+    numTgt = id.charAt(id.length-1);
+
+    $('.right-content .content-show').removeClass('active');
+    $('#prodic'+numTgt).addClass('active');
+})

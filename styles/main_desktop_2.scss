@@ -458,6 +458,76 @@ $main-grey: #363636;
         margin: 10px auto 0;
     }
 }
+
+#prodiParent{
+    padding-top: 90px;
+    .prodi-title{
+        color: $main-blue;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 20px 0;
+    }
+    .banner{
+        img{
+            display: block;
+        }
+    }
+    .main-content{
+        display: flex;
+        padding-top: 30px;
+    }
+    .left-bar{
+        width: 20%;
+        padding-bottom: 50px;
+        .prodi-nav{
+            .choice-module{
+                background: #eee;
+                color: $main-blue;
+                border-top: 1px solid #fff;
+                padding: 15px 20px;
+                font-size: 18px;
+                font-weight: bold;
+                cursor: pointer;
+                position: relative;
+            }
+            .choice-module.active{
+                color: white;
+                background: $main-blue;
+            }
+            .choice-module.active:after{
+                content: "";
+                height: 13px;
+                width: 13px;
+                background: white;
+                right: -7px;
+                top: 50%;
+                position: absolute;
+                display: block;
+                transform: translateY(-50%) rotateZ(45deg);
+            }
+        }
+        .function-button{
+            padding: 25px 20px;
+            display: block;
+            background: $main-gold;
+            color: white;
+            margin: 5px 0;
+        }
+        .function-button.blue{
+            background: $main-blue;
+        }
+    }
+    .right-content{
+        width: 80%;
+        padding-left: 30px;
+        .content-show{
+            display: none;
+        }
+        .content-show.active{
+            display: block;
+        }
+    }
+}
 //parentContainer
 .search-button{
     outline: none;
