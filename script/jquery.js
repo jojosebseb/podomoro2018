@@ -1,0 +1,3 @@
+$('#indexSlider').slick({
+    fade: true,
+})
