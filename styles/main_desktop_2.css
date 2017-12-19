@@ -42,12 +42,20 @@
 
 #navbar .top .top-ul > li {
   border-right: 2px solid white;
+  padding: 0 10px;
 }
 
 #navbar .top .top-ul > li a {
-  padding: 1px 10px;
-  font-size: 14px;
-  line-height: 10px;
+  font-size: 15px;
+  display: block;
+}
+
+#navbar .top .top-ul > li:last-child {
+  border-right: 0;
+}
+
+#navbar .logo-container img {
+  width: 150px;
   display: block;
 }
 
@@ -70,9 +78,10 @@
   margin-right: -1px;
   border-right: 1px solid #083f88;
   transition: all .1s ease;
+  position: relative;
 }
 
-#navbar .bottom .nav-ul > li a {
+#navbar .bottom .nav-ul > li > a {
   padding: 18px 20px;
   display: block;
 }
@@ -80,6 +89,92 @@
 #navbar .bottom .nav-ul > li:hover {
   background: #083f88;
   color: white;
+}
+
+#navbar .bottom .nav-ul > li:hover .submenu {
+  display: flex;
+}
+
+#navbar .bottom .submenu {
+  position: absolute;
+  background: white;
+  min-width: 200%;
+  border-top: 1px solid #eee;
+  top: 100%;
+  color: black;
+  display: none;
+  flex-wrap: wrap;
+  left: 0;
+  box-shadow: 0px 5px 6px 1px rgba(0, 0, 0, 0.2);
+}
+
+#navbar .bottom .submenu a {
+  padding: 13px 15px;
+  display: block;
+}
+
+#navbar .bottom .submenu > li {
+  width: 100%;
+}
+
+#navbar .bottom .submenu > li:hover {
+  background: #eee;
+}
+
+#navbar .bottom .submenu.double {
+  min-width: 400%;
+}
+
+#navbar .bottom .submenu.double li {
+  width: 50%;
+  align-items: center;
+}
+
+.desktop-hide {
+  display: none;
+}
+
+#navbarSearch {
+  position: relative;
+  font-size: 15px;
+}
+
+#navbarSearch .full-input {
+  outline: none;
+  padding-right: 30px;
+  transition: all .3s ease;
+  padding-left: 3px;
+  width: 100px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+
+#navbarSearch .full-input:focus {
+  width: 200px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+#navbarSearch ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: white;
+}
+
+#navbarSearch ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: white;
+}
+
+#navbarSearch :-ms-input-placeholder {
+  /* IE 10+ */
+  color: white;
+}
+
+#navbarSearch :-moz-placeholder {
+  /* Firefox 18- */
+  color: white;
+}
+
+#navbarSearch .search-button {
+  right: 0px;
 }
 
 #indexSlider .slide-items {
@@ -131,7 +226,7 @@
   justify-content: space-between;
 }
 
-#indexNews .news-flex .news-module {
+#indexNews .news-module {
   width: 32%;
   position: relative;
   margin: 15px 0;
@@ -139,27 +234,27 @@
   box-shadow: 0 2px 17px 1px rgba(0, 0, 0, 0.1);
 }
 
-#indexNews .news-flex .news-module .news-detail {
+#indexNews .news-module .news-detail {
   padding: 0 20px;
 }
 
-#indexNews .news-flex .news-module .top {
+#indexNews .news-module .top {
   padding: 10px 0 5px;
   font-size: 13px;
   opacity: 0.8;
 }
 
-#indexNews .news-flex .news-module .bottom {
+#indexNews .news-module .bottom {
   min-height: 80px;
   color: #083f88;
 }
 
-#indexNews .news-flex .news-module.highlight {
+#indexNews .news-module.highlight {
   width: 100%;
   box-shadow: none;
 }
 
-#indexNews .news-flex .news-module.highlight .news-detail {
+#indexNews .news-module.highlight .news-detail {
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -176,11 +271,11 @@
   /* IE6-9 */
 }
 
-#indexNews .news-flex .news-module.highlight .top {
+#indexNews .news-module.highlight .top {
   color: white;
 }
 
-#indexNews .news-flex .news-module.highlight .bottom {
+#indexNews .news-module.highlight .bottom {
   font-size: 24px;
   color: white;
   font-weight: bold;
@@ -421,6 +516,22 @@
   margin: 10px auto 0;
 }
 
+.search-button {
+  outline: none;
+  height: 16px;
+  width: 16px;
+  background-image: url("../img/magnifier.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 #footer {
   background: #363636;
   padding: 40px 0;
@@ -453,21 +564,6 @@
   background: rgba(0, 0, 0, 0.3);
   padding: 10px;
   outline: none;
-}
-
-#footer .footer-module .search-button {
-  height: 16px;
-  width: 16px;
-  background-image: url("../img/magnifier.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  cursor: pointer;
 }
 
 #footer .socmed-ul {
