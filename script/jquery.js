@@ -64,6 +64,12 @@ function mobileInit(){
         $('.nav-ul > li').find('.submenu').slideUp(300);
         $(this).find('.submenu').slideToggle(300);
     });
+    $(".prodi-nav").mCustomScrollbar({
+        axis:"x",
+        advanced:{
+            autoExpandHorizontalScroll:true
+        }
+    });
 }
 
 function mobileUnSlick(){
@@ -74,15 +80,6 @@ function widthController(){
         mobileInit()
         //mobile-slicks
         mobileSlick('.mobile-slick', 1);
-        // mobileSlickNoDots('.prodi-nav', 2);
-
-        $(".prodi-nav").mCustomScrollbar({
-            axis:"x",
-            advanced:{
-                autoExpandHorizontalScroll:true
-            }
-        });
-
     }
     else {
         mobileUnSlick();
