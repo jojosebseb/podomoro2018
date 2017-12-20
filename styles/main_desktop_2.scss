@@ -408,7 +408,44 @@ ul.slick-dots{
         margin: 40px auto 0;
     }
 }
-
+.arrow-box{
+    width: 28px;
+    height: 28px;
+    background: rgba(0,0,0,0.8);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .3s ease;
+    border-radius: 3px;
+    .arrow{
+        position: absolute;
+        top: 50%;
+        width: 40%;
+        height: 40%;
+        transform: translate(-50%, -50%) rotateZ(45deg);
+        border: 2px solid $main-white;
+    }
+}
+.arrow-box.slick-disabled{
+    opacity: 0.2;
+}
+.arrow-box.next{
+    right: -40px;
+    .arrow{
+        left: 40%;
+        border-left: 0;
+        border-bottom: 0;
+    }
+}
+.arrow-box.prev{
+    left: -40px;
+    .arrow{
+        left: 60%;
+        border-right: 0;
+        border-top: 0;
+    }
+}
 #indexTestimonial{
     background: $main-white;
     padding: 40px 0;

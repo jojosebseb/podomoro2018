@@ -23,8 +23,7 @@ $('#indexSlider').slick({
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true
+          slidesToScroll: 1,          
         }
       }
       // You can unslick at a given breakpoint now by adding:
@@ -35,10 +34,13 @@ $('#indexSlider').slick({
 
 $('.mobile-slick').slick({
     arrows: false,
-    infnite: false,
+    infinite: false,
     slidesToShow: 4,
     slidesToScroll: 1,
-    dots: true,
+    dots: false,
+    arrows: true,
+    nextArrow: '<div class="arrow-box next"><div class="arrow"></div></div>',
+    prevArrow: '<div class="arrow-box prev"><div class="arrow"></div></div>',
     responsive: [
       {
         breakpoint: 1024,
@@ -46,6 +48,7 @@ $('.mobile-slick').slick({
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: false,
+          arrows: false,
           dots: true
         }
       },
@@ -64,11 +67,45 @@ $('.mobile-slick').slick({
           dots: true
         }
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ]
-})
+});
+$('.news-flex').slick({
+    arrows: false,
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: true,
+    nextArrow: '<div class="arrow-box next"><div class="arrow"></div></div>',
+    prevArrow: '<div class="arrow-box prev"><div class="arrow"></div></div>',
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: false,
+          dots: true,
+          arrows: false,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true
+        }
+      }
+    ]
+});
 
 function desktopGate(){
     var lastScrollTop = 0;

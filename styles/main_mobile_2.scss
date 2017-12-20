@@ -84,6 +84,7 @@ header{
             border-top: 1px solid #eee;
             border-bottom: 1px solid #eee;
             left: 0;
+            width: 100%;
             >li{
                 width: 100%;
                 transition: all .1s ease;
@@ -421,8 +422,9 @@ ul.slick-dots{
         flex-wrap: wrap;
         justify-content: space-between;
         img{
-            width: 100%;
+            width: 50%;
             display: block;
+
         }
         .flex-module{
             margin: 20px 0 0;
