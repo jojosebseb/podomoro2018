@@ -22,10 +22,13 @@ $main-grey: #363636;
     padding: 0 10px;
     margin: auto;
 }
+header{
+    min-height: 0 !important;
+}
 //pallette
 
 //navbar
-#navbar{
+#navbar2{
     position: fixed;
     top: 0;
     left: 0;

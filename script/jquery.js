@@ -33,6 +33,77 @@ $('#indexSlider').slick({
     ]
 })
 
+$('.mobile-slick').slick({
+    arrows: false,
+    infnite: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: false,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+})
+
+function desktopGate(){
+    var lastScrollTop = 0;
+    var height = $( window ).height();
+
+    $(window).scroll(function(event){
+       var st = $(this).scrollTop();
+       if (st > lastScrollTop){
+           if (st >= height) {
+                //stop
+           }
+           else {
+               $('#indexSlider').css({
+                   top: (-st)+'px',
+               });
+               $('.gate-div').css({
+                   marginTop: (st)+'px'
+               });
+           }
+       } else {
+           if (st >= height) {
+                //stop
+           }
+           else {
+               $('#indexSlider').css({
+                   top: (-st)+'px',
+               });
+               $('.gate-div').css({
+                   marginTop: (st)+'px'
+               });
+           }
+       }
+       lastScrollTop = st;
+    });
+}
 
 function mobileSlick(objClass, slidesToShow){
     $(objClass).slick({
@@ -79,10 +150,11 @@ function widthController(){
     if ($(window).width() < 600) {
         mobileInit()
         //mobile-slicks
-        mobileSlick('.mobile-slick', 1);
+        // mobileSlick('.mobile-slick', 1);
     }
     else {
-        mobileUnSlick();
+        // mobileUnSlick();
+        desktopGate();
     }
 }
 
@@ -101,4 +173,4 @@ $('.prodi-nav .choice-module').on('click', function(){
 
     $('.right-content .content-show').removeClass('active');
     $('#prodic'+numTgt).addClass('active');
-})
+});

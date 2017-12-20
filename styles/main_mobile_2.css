@@ -16,7 +16,11 @@
   margin: auto;
 }
 
-#navbar {
+header {
+  min-height: 0 !important;
+}
+
+#navbar2 {
   position: fixed;
   top: 0;
   left: 0;
@@ -25,53 +29,53 @@
   box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
-#navbar .desktop-hide {
+#navbar2 .desktop-hide {
   color: white;
   background: #083f88;
 }
 
-#navbar .top {
+#navbar2 .top {
   background: #083f88;
 }
 
-#navbar .top .container {
+#navbar2 .top .container {
   display: flex;
   padding: 8px 0;
   align-items: center;
 }
 
-#navbar .top .top-ul {
+#navbar2 .top .top-ul {
   color: white;
   display: flex;
   flex-wrap: wrap;
 }
 
-#navbar .top .top-ul > li {
+#navbar2 .top .top-ul > li {
   width: 100%;
 }
 
-#navbar .top .top-ul > li a {
+#navbar2 .top .top-ul > li a {
   padding: 5px 10px;
   display: block;
 }
 
-#navbar .logo-container img {
+#navbar2 .logo-container img {
   width: 120px;
   display: block;
 }
 
-#navbar .bottom {
+#navbar2 .bottom {
   background: #f8f8f8;
   padding: 10px 0;
 }
 
-#navbar .bottom .container {
+#navbar2 .bottom .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#navbar .bottom .nav-ul {
+#navbar2 .bottom .nav-ul {
   display: none;
   position: absolute;
   top: 100%;
@@ -82,38 +86,38 @@
   left: 0;
 }
 
-#navbar .bottom .nav-ul > li {
+#navbar2 .bottom .nav-ul > li {
   width: 100%;
   transition: all .1s ease;
 }
 
-#navbar .bottom .nav-ul > li > a {
+#navbar2 .bottom .nav-ul > li > a {
   padding: 12px 15px;
   display: block;
 }
 
-#navbar .bottom .nav-ul > li:hover {
+#navbar2 .bottom .nav-ul > li:hover {
   background: #083f88;
   color: white;
 }
 
-#navbar .bottom .nav-ul > li:hover .submenu {
+#navbar2 .bottom .nav-ul > li:hover .submenu {
   padding-bottom: 10px;
 }
 
-#navbar .bottom .submenu {
+#navbar2 .bottom .submenu {
   display: none;
   background: #eee;
   color: black;
 }
 
-#navbar .bottom .submenu a {
+#navbar2 .bottom .submenu a {
   padding: 8px 15px;
   display: block;
   font-size: 14px;
 }
 
-#navbar .bottom .nav-ul.active {
+#navbar2 .bottom .nav-ul.active {
   display: flex;
 }
 
