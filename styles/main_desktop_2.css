@@ -16,6 +16,13 @@
   margin: auto;
 }
 
+.section-header {
+  color: #083f88;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
 header {
   min-height: 0 !important;
 }
@@ -180,6 +187,10 @@ header {
 
 #navbarSearch .search-button {
   right: 0px;
+}
+
+#parentContainer {
+  min-height: 80vh;
 }
 
 #indexSlider {
@@ -403,6 +414,11 @@ ul.slick-dots button {
   padding: 50px 0;
 }
 
+#indexEvents .socmed-share {
+  position: absolute;
+  bottom: 0;
+}
+
 #indexEvents .section-title {
   color: white;
   padding-top: 0;
@@ -440,7 +456,7 @@ ul.slick-dots button {
 }
 
 #indexEvents .flex .event-details {
-  padding: 30px 20px;
+  padding: 30px 20px 50px;
   min-height: 155px;
   font-size: 18px;
 }
@@ -709,6 +725,147 @@ ul.slick-dots button {
 
 #prodiParent .right-content .content-show.active {
   display: block;
+}
+
+.news-section {
+  padding-bottom: 20px;
+}
+
+.news-section img {
+  display: block;
+}
+
+.news-section .box-button {
+  background: #083f88;
+  color: white;
+  padding: 18px;
+  width: 230px;
+  text-align: center;
+  margin: auto;
+  cursor: pointer;
+}
+
+.news-section .featured-banner {
+  position: relative;
+}
+
+.news-section .featured-banner .banner-flag {
+  background: #083f88;
+  color: white;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  padding: 15px 25px;
+  z-index: 55;
+  letter-spacing: 1px;
+}
+
+.news-section .featured-banner .banner-desc {
+  position: absolute;
+  z-index: 44;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 30px 50px 30px 130px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#999999+0,000000+90,000000+100&0+0,1+90 */
+  background: -moz-linear-gradient(top, rgba(153, 153, 153, 0) 0%, black 90%, black 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(153, 153, 153, 0) 0%, black 90%, black 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(153, 153, 153, 0) 0%, black 90%, black 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00999999', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */
+}
+
+.news-section .featured-banner .top {
+  color: white;
+}
+
+.news-section .featured-banner .bottom {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  min-height: 0;
+}
+
+.news-section .flex {
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.news-section .flex .flex-module {
+  width: 50%;
+  display: flex;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+.news-section .flex .flex-module .flex-image {
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+}
+
+.news-section .flex .flex-module .flex-image img {
+  transition: all .3s ease;
+}
+
+.news-section .flex .flex-module:hover .flex-image img {
+  transform: scale(1.05);
+}
+
+.news-section .flex .flex-desc {
+  width: 50%;
+  padding: 5px 0px 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: baseline;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.news-section .flex .flex-desc .date {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
+
+.news-section .flex .flex-desc .title {
+  color: #083f88;
+  font-size: 18px;
+}
+
+.news-section .flex .socmed-share {
+  display: flex;
+}
+
+.news-section .flex .socmed-share a {
+  display: block;
+  margin-right: 10px;
+}
+
+.news-section .flex .socmed-share a:hover {
+  opacity: 0.8;
+}
+
+.socmed-share {
+  display: flex;
+  padding: 15px 0;
+}
+
+.socmed-share a {
+  display: block;
+  margin-right: 10px;
+}
+
+.socmed-share a:hover {
+  opacity: 0.8;
+}
+
+#artikelSection {
+  padding-top: 90px;
 }
 
 .search-button {

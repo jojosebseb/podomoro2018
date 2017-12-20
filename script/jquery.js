@@ -1,3 +1,14 @@
+function widthController(){
+    if ($(window).width() < 600) {
+        mobileInit()
+        //mobile-slicks
+        // mobileSlick('.mobile-slick', 1);
+    }
+    else {
+        // mobileUnSlick();
+        desktopGate();
+    }
+};
 $('#indexSlider').slick({
     fade: true,
     arrows: false,
@@ -23,14 +34,14 @@ $('#indexSlider').slick({
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,          
+          slidesToScroll: 1,
         }
       }
       // You can unslick at a given breakpoint now by adding:
       // settings: "unslick"
       // instead of a settings object
     ]
-})
+});
 
 $('.mobile-slick').slick({
     arrows: false,
@@ -69,6 +80,7 @@ $('.mobile-slick').slick({
       }
     ]
 });
+
 $('.news-flex').slick({
     arrows: false,
     infinite: false,
@@ -183,17 +195,7 @@ function mobileInit(){
 function mobileUnSlick(){
 };
 
-function widthController(){
-    if ($(window).width() < 600) {
-        mobileInit()
-        //mobile-slicks
-        // mobileSlick('.mobile-slick', 1);
-    }
-    else {
-        // mobileUnSlick();
-        desktopGate();
-    }
-}
+
 
 widthController();
 
