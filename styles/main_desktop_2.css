@@ -327,6 +327,15 @@ ul.slick-dots button {
   color: #083f88;
 }
 
+#indexNews .news-module .bottom a {
+  max-height: 40px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
 #indexNews .news-module.highlight {
   width: 100%;
   box-shadow: none;
@@ -717,6 +726,7 @@ ul.slick-dots button {
 #prodiParent .right-content {
   width: 80%;
   padding-left: 30px;
+  padding-bottom: 50px;
 }
 
 #prodiParent .right-content .content-show {
@@ -868,6 +878,176 @@ ul.slick-dots button {
   padding-top: 90px;
 }
 
+.overview-item-title {
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #083f88;
+}
+
+.overview-item {
+  margin-bottom: 20px;
+}
+
+.btn-apply-now {
+  background: #083f88;
+  color: white;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  display: block;
+}
+
+#prodic1 span {
+  opacity: 0.95;
+  font-size: 15px !important;
+  font-family: 'MyriadProRegular' !important;
+  line-height: 1.5;
+}
+
+#prodic1 ul {
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+#prodic1 li {
+  list-style: disc;
+  list-style-position: outside;
+}
+
+.program-testimonials-item-container {
+  display: flex;
+  background: #fbfbfb;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+.program-testimonials-item-container * {
+  font-family: MyriadProRegular !important;
+  display: block;
+}
+
+.program-testimonials-item-container img {
+  padding: 0 10px;
+  height: 230px;
+}
+
+.program-testimonials-item-container .program-testimonials-item-text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: baseline;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 50px 0 30px;
+}
+
+.program-testimonials-item-container .program-testimonials-item-text-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.program-testimonials-item-container .program-testimonials-item-text-content {
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.lecturer-ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lecturer-ul * {
+  float: none;
+}
+
+.lecturer-ul > a {
+  display: block;
+  width: 50%;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.lecturer-ul .lecturer-li {
+  width: 100%;
+  margin: 0;
+  background: #083f88;
+  display: flex;
+}
+
+.lecturer-ul .lecturer-li img {
+  float: none;
+  width: auto;
+  height: 200px;
+}
+
+.lecturer-ul .lecturer-li:hover {
+  background: #083f88;
+}
+
+.lecturer-ul .lecturerdetail {
+  margin-right: 0;
+  margin-top: 0;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+}
+
+.lecturer-ul .lecturerdetail span {
+  width: 100%;
+}
+
+.kegiatan-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.kegiatan-flex .kegiatan-module {
+  display: flex;
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.kegiatan-flex .kegiatan-module a {
+  display: block;
+}
+
+.kegiatan-flex .kegiatan-module img {
+  display: block;
+  width: 100%;
+}
+
+.kegiatan-flex .kegiatan-module .image-box {
+  width: 50%;
+}
+
+.kegiatan-flex .kegiatan-module .flex-desc {
+  width: 50%;
+  padding-left: 10px;
+}
+
+.kegiatan-flex .date {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.kegiatan-flex .title {
+  font-weight: bold;
+  color: #083f88;
+  height: 60px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
 .search-button {
   outline: none;
   height: 16px;
@@ -886,7 +1066,7 @@ ul.slick-dots button {
 
 #footer {
   background: #363636;
-  padding: 40px 0;
+  padding: 40px 0 0;
   color: white;
 }
 
@@ -933,4 +1113,20 @@ ul.slick-dots button {
 
 #footer .footer-ul li {
   padding: 3px 0;
+}
+
+#footer .line {
+  width: 100%;
+  border-top: 1px solid #252525;
+  margin-top: 40px;
+  border-bottom: 1px solid #444;
+}
+
+#footer .footer-bottom-text {
+  color: #868585;
+  font-size: 15px;
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 30px 0;
 }

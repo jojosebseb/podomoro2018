@@ -1,5 +1,5 @@
 function widthController(){
-    if ($(window).width() < 600) {
+    if ($(window).width() < 1050) {
         mobileInit()
         //mobile-slicks
         // mobileSlick('.mobile-slick', 1);
@@ -17,8 +17,8 @@ $('#indexSlider').slick({
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           infinite: false,
           dots: true
         }
@@ -26,8 +26,8 @@ $('#indexSlider').slick({
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToShow: 1,
+          slidesToScroll: 1
         }
       },
       {
@@ -54,7 +54,7 @@ $('.mobile-slick').slick({
     prevArrow: '<div class="arrow-box prev"><div class="arrow"></div></div>',
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1025,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,

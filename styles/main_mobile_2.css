@@ -241,7 +241,7 @@ ul.slick-dots button {
 
 #indexSlider .slide-items {
   width: 100vw;
-  height: 45vh;
+  height: 50vw;
   background: #eee;
   background-position: center center;
   background-size: cover;
@@ -472,6 +472,7 @@ ul.slick-dots button {
 #indexTestimonial .flex img {
   width: 50%;
   display: block;
+  margin: auto;
 }
 
 #indexTestimonial .flex .flex-module {
@@ -509,6 +510,7 @@ ul.slick-dots button {
 #indexTestimonial .flex .testimonial-detail .testimonial-summary {
   font-size: 14px;
   padding: 10px 0 0;
+  min-height: 50px;
 }
 
 #indexTestimonial .box-button {
@@ -677,10 +679,202 @@ ul.slick-dots button {
   display: block;
 }
 
+.overview-item-title {
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #083f88;
+}
+
+.overview-item {
+  margin-bottom: 20px;
+}
+
+.btn-apply-now {
+  background: #083f88;
+  color: white;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  display: block;
+}
+
+#prodic1 span {
+  opacity: 0.95;
+  font-size: 15px !important;
+  font-family: 'MyriadProRegular' !important;
+  line-height: 1.5;
+}
+
+#prodic1 ul {
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+#prodic1 li {
+  list-style: disc;
+  list-style-position: outside;
+}
+
+.program-testimonials-item-container {
+  display: flex;
+  background: #fbfbfb;
+  margin: 20px 0;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.program-testimonials-item-container * {
+  font-family: MyriadProRegular !important;
+  display: block;
+  width: 100%;
+  font-size: 14px !important;
+}
+
+.program-testimonials-item-container img {
+  padding: 0 10px;
+  height: 230px;
+  width: auto;
+  margin: 10px auto;
+}
+
+.program-testimonials-item-container .program-testimonials-item-text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: baseline;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 30px 40px;
+}
+
+.program-testimonials-item-container .program-testimonials-item-text-title {
+  font-weight: bold;
+  font-size: 18px !important;
+  padding: 10px 0 5px;
+}
+
+.program-testimonials-item-container .program-testimonials-item-text-content {
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.lecturer-ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lecturer-ul * {
+  float: none;
+}
+
+.lecturer-ul > a {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin: 20px 0;
+}
+
+.lecturer-ul .lecturer-li {
+  width: 100%;
+  margin: 0;
+  background: #083f88;
+  display: flex;
+}
+
+.lecturer-ul .lecturer-li img {
+  float: none;
+  width: auto;
+}
+
+.lecturer-ul .lecturer-li:hover {
+  background: #083f88;
+}
+
+.lecturer-ul .lecturerdetail {
+  margin-right: 0;
+  margin-top: 0;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  text-align: left;
+}
+
+.lecturer-ul .lecturerdetail span {
+  width: 100%;
+}
+
+.socmed-share {
+  display: flex;
+  padding: 15px 0;
+}
+
+.socmed-share a {
+  display: block;
+  margin-right: 10px;
+}
+
+.socmed-share a:hover {
+  opacity: 0.8;
+}
+
+.kegiatan-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.kegiatan-flex .kegiatan-module {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.kegiatan-flex .kegiatan-module a {
+  display: block;
+}
+
+.kegiatan-flex .kegiatan-module img {
+  display: block;
+  width: 100%;
+}
+
+.kegiatan-flex .kegiatan-module .image-box {
+  width: 50%;
+}
+
+.kegiatan-flex .kegiatan-module .flex-desc {
+  width: 50%;
+  padding-left: 10px;
+}
+
+.kegiatan-flex .date {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.kegiatan-flex .title {
+  font-weight: bold;
+  color: #083f88;
+  height: 40px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
 #footer {
   background: #363636;
   padding: 40px 0;
   color: white;
+  font-family: Calibri;
 }
 
 #footer img {
@@ -708,6 +902,7 @@ ul.slick-dots button {
   background: rgba(0, 0, 0, 0.3);
   padding: 10px;
   outline: none;
+  max-width: 100%;
 }
 
 #footer .footer-module .search-button {
@@ -740,4 +935,231 @@ ul.slick-dots button {
 
 #footer .footer-ul li {
   padding: 3px 0;
+}
+
+#footer .line {
+  width: 100%;
+  border-top: 1px solid #252525;
+  margin-top: 40px;
+  border-bottom: 1px solid #444;
+}
+
+#footer .footer-bottom-text {
+  color: #868585;
+  font-size: 15px;
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 30px 0 0;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .container {
+    max-width: 1000px;
+  }
+  .footer-module {
+    max-width: 30%;
+  }
+  #indexVideo {
+    padding: 40px 0;
+  }
+  #indexVideo .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  #indexVideo .preview-highlight {
+    width: 62%;
+  }
+  #indexVideo .preview-highlight .video-player {
+    width: 100%;
+    height: 350px;
+  }
+  #indexVideo .suggested-list {
+    width: 35%;
+    padding: 5px 0;
+  }
+  #indexVideo .suggested-list img {
+    display: block;
+    width: 170px;
+  }
+  #indexVideo .suggested-list .video-module {
+    display: flex;
+    margin-bottom: 25px;
+    cursor: pointer;
+  }
+  #indexVideo .suggested-list .video-module .video-desc {
+    padding: 1px 10px;
+  }
+  #indexVideo .suggested-list .video-module .video-title {
+    font-weight: bold;
+    font-size: 15px;
+  }
+  #indexVideo .suggested-list .video-module .video-publisher {
+    opacity: 0.6;
+    font-size: 13px;
+    margin: 5px 0;
+  }
+  #indexVideo .suggested-list .video-module .video-views {
+    opacity: 0.6;
+    font-size: 13px;
+  }
+  #indexVideo .box-button {
+    background: #083f88;
+    color: white;
+    padding: 15px 30px;
+    display: block;
+    text-align: center;
+    width: 180px;
+    margin: 10px auto 0;
+  }
+  #indexNews {
+    padding-top: 0px;
+  }
+  #indexNews img {
+    max-width: 100%;
+    display: block;
+  }
+  #indexNews .news-flex {
+    width: 100%;
+  }
+  #indexNews .news-module {
+    width: 32%;
+    position: relative;
+    margin: 15px 5px;
+    background: white;
+    box-shadow: 0 2px 17px 1px rgba(0, 0, 0, 0.1);
+  }
+  #indexNews .news-module .news-detail {
+    padding: 0 20px;
+  }
+  #indexNews .news-module .top {
+    padding: 10px 0 5px;
+    font-size: 13px;
+    opacity: 0.8;
+  }
+  #indexNews .news-module .bottom {
+    min-height: 80px;
+    color: #083f88;
+  }
+  #indexNews .news-module.highlight {
+    width: 100%;
+    box-shadow: none;
+  }
+  #indexNews .news-module.highlight .news-detail {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 30px 40px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#999999+0,000000+90,000000+100&0+0,1+90 */
+    background: -moz-linear-gradient(top, rgba(153, 153, 153, 0) 0%, black 90%, black 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(153, 153, 153, 0) 0%, black 90%, black 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(153, 153, 153, 0) 0%, black 90%, black 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00999999', endColorstr='#000000',GradientType=0 );
+    /* IE6-9 */
+  }
+  #indexNews .news-module.highlight .top {
+    color: white;
+  }
+  #indexNews .news-module.highlight .bottom {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    min-height: 0;
+  }
+  #indexNews .news-sub {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 0;
+  }
+  #indexNews .news-sub .sub-title {
+    width: 100%;
+  }
+  #indexNews .news-sub .w50 {
+    width: 48%;
+    position: relative;
+    padding: 20px 0;
+  }
+  #indexNews .news-sub .float-button {
+    background: #083f88;
+    color: white;
+    padding: 12px 25px;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    cursor: pointer;
+  }
+  #indexNews .news-sub .full-input {
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 18px 20px;
+    outline: none;
+    font-size: 18px;
+  }
+  #indexNews .news-sub .full-button {
+    background: #083f88;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 18px 0;
+    display: block;
+    cursor: pointer;
+  }
+  .lecturer-ul > a {
+    width: 50%;
+  }
+  .lecturer-ul .lecturer-li img {
+    height: 150px;
+  }
+  .program-testimonials-item-container .program-testimonials-item-text {
+    width: 60%;
+    text-align: left;
+  }
+  .kegiatan-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .kegiatan-flex .socmed-share {
+    position: absolute;
+    bottom: 0;
+  }
+  .kegiatan-flex .kegiatan-module {
+    display: flex;
+    width: 50%;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .kegiatan-flex .kegiatan-module a {
+    display: block;
+  }
+  .kegiatan-flex .kegiatan-module img {
+    display: block;
+    width: 100%;
+  }
+  .kegiatan-flex .kegiatan-module .image-box {
+    width: 50%;
+  }
+  .kegiatan-flex .kegiatan-module .flex-desc {
+    width: 50%;
+    padding-left: 10px;
+  }
+  .kegiatan-flex .date {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  .kegiatan-flex .title {
+    font-weight: bold;
+    color: #083f88;
+    height: 80px;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
 }
