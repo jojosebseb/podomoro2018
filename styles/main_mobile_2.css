@@ -635,6 +635,7 @@ ul.slick-dots button {
 
 #prodiParent {
   padding-top: 90px;
+  padding-bottom: 100px;
 }
 
 #prodiParent .prodi-title {
@@ -1033,39 +1034,25 @@ ul.slick-dots button {
 .news-section .featured-banner .banner-flag {
   background: #083f88;
   color: white;
-  position: absolute;
-  bottom: 30px;
-  left: 0;
-  padding: 15px 25px;
+  padding: 10px 15px;
   z-index: 55;
   letter-spacing: 1px;
 }
 
 .news-section .featured-banner .banner-desc {
-  position: absolute;
   z-index: 44;
   width: 100%;
   bottom: 0;
   left: 0;
-  padding: 30px 50px 30px 130px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#999999+0,000000+90,000000+100&0+0,1+90 */
-  background: -moz-linear-gradient(top, rgba(153, 153, 153, 0) 0%, black 90%, black 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(153, 153, 153, 0) 0%, black 90%, black 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(153, 153, 153, 0) 0%, black 90%, black 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00999999', endColorstr='#000000',GradientType=0 );
-  /* IE6-9 */
-}
-
-.news-section .featured-banner .top {
-  color: white;
 }
 
 .news-section .featured-banner .bottom {
-  font-size: 24px;
-  color: white;
+  font-size: 18px;
   font-weight: bold;
   min-height: 0;
 }
@@ -1090,6 +1077,7 @@ ul.slick-dots button {
 
 .news-section .flex .flex-module .flex-image img {
   transition: all .3s ease;
+  width: 100%;
 }
 
 .news-section .flex .flex-module:hover .flex-image img {
@@ -1098,7 +1086,7 @@ ul.slick-dots button {
 
 .news-section .flex .flex-desc {
   width: 50%;
-  padding: 5px 0px 10px 20px;
+  padding: 5px 0px 10px 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1114,7 +1102,13 @@ ul.slick-dots button {
 
 .news-section .flex .flex-desc .title {
   color: #083f88;
-  font-size: 18px;
+  font-size: 16px;
+  height: 55px;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  display: -webkit-box;
 }
 
 .news-section .flex .socmed-share {
@@ -1451,5 +1445,95 @@ ul.slick-dots button {
     height: 80px;
     text-overflow: ellipsis;
     width: 100%;
+  }
+  .news-section .flex .flex-module {
+    width: 50%;
+    display: flex;
+    margin: 10px 0;
+  }
+  #agendaSection {
+    padding-bottom: 40px;
+  }
+  #agendaSection .box-button {
+    background: #083f88;
+    color: white;
+    padding: 15px 30px;
+    display: block;
+    text-align: center;
+    width: 180px;
+    margin: 40px auto 0;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.21);
+  }
+  #agendaSection .flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+  #agendaSection .flex .w50 {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #agendaSection .flex .w100 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #agendaSection .flex .w100 .flex-module {
+    width: 25%;
+  }
+  #agendaSection .flex .flex-module {
+    width: 50%;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+  }
+  #agendaSection .flex .flex-module .socmed-share {
+    position: absolute;
+    bottom: 0;
+  }
+  #agendaSection .flex .flex-module .box {
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+    background: white;
+    position: relative;
+    overflow: hidden;
+  }
+  #agendaSection .flex .flex-module img {
+    display: block;
+    width: 100%;
+    transition: all .3s ease;
+  }
+  #agendaSection .flex .flex-module .flex-desc {
+    background: white;
+    color: #083f88;
+    position: absolute;
+    padding: 20px 15px 60px;
+    z-index: 5;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+  #agendaSection .flex .flex-module .title {
+    overflow: hidden;
+    max-height: 40px;
+  }
+  #agendaSection .flex .flex-module .date {
+    color: white;
+    background: #a1904e;
+    text-align: center;
+    position: absolute;
+    padding: 5px 10px;
+    left: 10px;
+    top: -30px;
+  }
+  #agendaSection .flex .flex-module.highlight {
+    width: 100%;
+  }
+  #agendaSection .flex .flex-module.highlight .flex-desc {
+    background: #083f88;
+    color: white;
+  }
+  #agendaSection .flex .flex-module:hover img {
+    transform: scale(1.05);
   }
 }
