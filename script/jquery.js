@@ -1,12 +1,9 @@
 function widthController(){
     if ($(window).width() < 1050) {
         mobileInit()
-        //mobile-slicks
-        // mobileSlick('.mobile-slick', 1);
     }
     else {
-        // mobileUnSlick();
-        desktopGate();
+        desktopGate2();
     }
 };
 $('#indexSlider').slick({
@@ -42,6 +39,47 @@ $('#indexSlider').slick({
       // instead of a settings object
     ]
 });
+
+var winHeight;
+
+
+function desktopGate2(){
+    $(window).ready(function(){
+        winHeight = $('.gate-init').height();
+    });
+    var lastScrollTop = 0;
+    var height = (($( window ).height())-55);
+    $('.gate').css({
+        marginBottom: winHeight+'px'
+    });
+    $(window).scroll(function(event){
+       var st = $(this).scrollTop();
+       if (st > lastScrollTop){
+           if (st >= height) {
+                //stop
+                $('.gate').css({
+                    marginBottom: 0+'px'
+                });
+                $('.gate-init').removeClass('gate-div');
+           }
+           else {
+           }
+       } else {
+           if (st >= height) {
+                //stop
+           }
+           else {
+               $('.gate').css({
+                   marginBottom: winHeight+'px'
+               });
+               $('.gate-init').addClass('gate-div');
+          }
+       }
+       lastScrollTop = st;
+    });
+}
+
+
 
 $('.mobile-slick').slick({
     arrows: false,
@@ -119,41 +157,6 @@ $('.news-flex').slick({
     ]
 });
 
-function desktopGate(){
-    var lastScrollTop = 0;
-    var height = $( window ).height();
-
-    $(window).scroll(function(event){
-       var st = $(this).scrollTop();
-       if (st > lastScrollTop){
-           if (st >= height) {
-                //stop
-           }
-           else {
-               $('#indexSlider').css({
-                   top: (-st)+'px',
-               });
-               $('.gate-div').css({
-                   marginTop: (st)+'px'
-               });
-           }
-       } else {
-           if (st >= height) {
-                //stop
-           }
-           else {
-               $('#indexSlider').css({
-                   top: (-st)+'px',
-               });
-               $('.gate-div').css({
-                   marginTop: (st)+'px'
-               });
-           }
-       }
-       lastScrollTop = st;
-    });
-}
-
 function mobileSlick(objClass, slidesToShow){
     $(objClass).slick({
         dots: true,
@@ -190,14 +193,12 @@ function mobileInit(){
             autoExpandHorizontalScroll:true
         }
     });
-}
-
-function mobileUnSlick(){
 };
 
+$(window).ready(function(){
+    widthController();
+});
 
-
-widthController();
 
 $( window ).resize(function() {
     widthController();
