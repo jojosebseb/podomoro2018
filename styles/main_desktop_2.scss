@@ -447,16 +447,9 @@ ul.slick-dots{
             font-size: 16px;
         }
     }
-    .box-button{
-        background: rgba(0,0,0,0.5);
-        color: white;
-        padding: 15px 30px;
-        display: block;
-        text-align: center;
-        width: 180px;
-        margin: 40px auto 0;
-    }
+
 }
+
 .arrow-box{
     width: 28px;
     height: 28px;
@@ -607,7 +600,28 @@ ul.slick-dots{
         margin: 10px auto 0;
     }
 }
-
+.box-button{
+    cursor: pointer;
+}
+.breadcrumb{
+    opacity: 0.5;
+    padding-top: 20px;
+    a:first-child{
+        margin-left: 0;
+    }
+    a{
+        margin: 0 5px;
+        font-size: 14px;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
+.program-banner {
+    height: 129px;
+    background: none !important;
+    margin-top: 50px;
+}
 #prodiParent{
     padding-top: $navbar-height;
     .prodi-title{
@@ -783,21 +797,39 @@ ul.slick-dots{
         }
     }
 }
+
 .socmed-share{
     display: flex;
     padding: 15px 0;
-    img{
-        transform: scale(1) !important;
-    }
     a{
         display: block;
         margin-right: 10px;
+        img{
+            transform: scale(1) !important;
+            filter: brightness(0);
+            transition: all .3s ease;
+        }
     }
     a:hover{
-        opacity: 0.8;
+        img{
+            filter: brightness(1);
+        }
     }
 }
-#artikelSection{
+.socmed-share.white{
+    a{
+        img{
+            filter: brightness(0) invert(100%);
+        }
+    }
+    a:hover{
+        img{
+            filter: brightness(1) invert(0);
+        }
+    }
+}
+
+.section-container:first-child{
     padding-top: $navbar-height;
 }
 .overview-item-title {
@@ -949,6 +981,96 @@ ul.slick-dots{
     }
 }
 
+#agendaSection{
+    padding-bottom: 40px;
+    .box-button{
+        background: $main-blue;
+        color: white;
+        padding: 15px 30px;
+        display: block;
+        text-align: center;
+        width: 180px;
+        margin: 40px auto 0;
+        box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.21);
+    }
+
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+        .w50{
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .w100{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            .flex-module{
+                width: 25%;
+            }
+        }
+        .flex-module{
+            width: 50%;
+            padding: 10px;
+            position: relative;
+            cursor: pointer;
+            .socmed-share{
+                position: absolute;
+                bottom: 0;
+            }
+            .box{
+                box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1);
+                background: white;
+                position: relative;
+                overflow: hidden;
+            }
+
+            img{
+                display: block;
+                width: 100%;
+                transition: all .3s ease;
+            }
+            .flex-desc{
+                background: white;
+                color: $main-blue;
+                position: absolute;
+                padding: 20px 15px 60px;
+                z-index: 5;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+            }
+            .title{
+                overflow: hidden;
+                max-height: 40px;
+            }
+            .date{
+                color: white;
+                background: $main-gold;
+                text-align: center;
+                position: absolute;
+                padding: 5px 10px;
+                left: 10px;
+                top: -30px;
+            }
+
+        }
+        .flex-module.highlight{
+            width: 100%;
+            .flex-desc{
+                background: $main-blue;
+                color: white;
+            }
+        }
+        .flex-module:hover{
+            img{
+                transform: scale(1.05);
+            }
+        }
+    }
+}
 //parentContainer
 .search-button{
     outline: none;
@@ -1027,6 +1149,7 @@ ul.slick-dots{
 .gate{
     // opacity: 0.8;
     // margin-bottom: -100vh;
+    margin-bottom: 2000px;
 }
 .gate-div{
     // padding-top: 80vh !important;

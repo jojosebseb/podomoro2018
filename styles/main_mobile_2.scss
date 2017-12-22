@@ -8,7 +8,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family: MyriadProRegular;
+    font-family: MyriadProRegular, 'Calibri';
 }
 //init end
 
@@ -24,6 +24,28 @@ $main-grey: #363636;
 }
 header{
     min-height: 0 !important;
+}
+.section-header{
+    color: $main-blue;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+$navbar-height: 53px;
+
+.breadcrumb{
+    opacity: 0.5;
+    padding-top: 20px;
+    a:first-child{
+        margin-left: 0;
+    }
+    a{
+        margin: 0 5px;
+        font-size: 14px;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
 }
 //pallette
 
@@ -755,9 +777,28 @@ ul.slick-dots{
     a{
         display: block;
         margin-right: 10px;
+        img{
+            transform: scale(1) !important;
+            filter: brightness(0);
+            transition: all .3s ease;
+        }
     }
     a:hover{
-        opacity: 0.8;
+        img{
+            filter: brightness(1);
+        }
+    }
+}
+.socmed-share.white{
+    a{
+        img{
+            filter: brightness(0) invert(100%);
+        }
+    }
+    a:hover{
+        img{
+            filter: brightness(1) invert(0);
+        }
     }
 }
 .kegiatan-flex{
@@ -873,7 +914,210 @@ ul.slick-dots{
     }
 }
 //footer
+.news-section{
+    padding-bottom: 20px;
+    img{
+        display: block;
+        max-width: 100%;
+    }
+    .box-button{
+        background: $main-blue;
+        color: white;
+        padding: 18px;
+        width: 230px;
+        text-align: center;
+        margin: auto;
+        cursor: pointer;
+    }
+    .featured-banner{
+        position: relative;
+        .banner-flag{
+            background: $main-blue;
+            color: white;
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            padding: 15px 25px;
+            z-index: 55;
+            letter-spacing: 1px;
+        }
+        .banner-desc{
+            position: absolute;
+            z-index: 44;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            padding: 30px 50px 30px 130px;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#999999+0,000000+90,000000+100&0+0,1+90 */
+            background: -moz-linear-gradient(top, rgba(153,153,153,0) 0%, rgba(0,0,0,1) 90%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, rgba(153,153,153,0) 0%,rgba(0,0,0,1) 90%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, rgba(153,153,153,0) 0%,rgba(0,0,0,1) 90%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00999999', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+        }
+        .top{
+            color: white;
+        }
+        .bottom{
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            min-height: 0;
+        }
+    }
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+        cursor: pointer;
+        .flex-module{
+            width: 100%;
+            display: flex;
+            // padding: 10px;
+            margin: 10px 0;
+            .flex-image{
+                position: relative;
+                overflow: hidden;
+                width: 50%;
+                img{
+                    transition: all .3s ease;
+                }
+            }
+        }
+        .flex-module:hover{
+            .flex-image{
+                img{
+                    transform: scale(1.05);
+                }
+            }
+        }
 
+        .flex-desc{
+            width: 50%;
+            padding: 5px 0px 10px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: baseline;
+            flex-direction: column;
+            cursor: pointer;
+            .date{
+                color: rgba(0,0,0,0.5);
+                font-size: 14px;
+            }
+            .title{
+                color: $main-blue;
+                font-size: 18px;
+            }
+        }
+        .socmed-share{
+            display: flex;
+            a{
+                display: block;
+                margin-right: 10px;
+            }
+            a:hover{
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+#agendaSection{
+    padding-bottom: 40px;
+    .box-button{
+        background: $main-blue;
+        color: white;
+        padding: 15px 30px;
+        display: block;
+        text-align: center;
+        width: 180px;
+        margin: 40px auto 0;
+        box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.21);
+    }
+    .img-box{
+        padding-bottom: 40px;
+    }
+
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -5px;
+        .w50{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .w100{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            .flex-module{
+                width: 50%;
+            }
+        }
+        .flex-module{
+            width: 50%;
+            padding: 10px;
+            position: relative;
+            cursor: pointer;
+            .socmed-share{
+                position: absolute;
+                bottom: 0;
+            }
+            .box{
+                box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1);
+                background: white;
+                position: relative;
+                overflow: hidden;
+            }
+
+            img{
+                display: block;
+                width: 100%;
+                transition: all .3s ease;
+            }
+            .flex-desc{
+                background: white;
+                color: $main-blue;
+                position: absolute;
+                padding: 20px 15px 60px;
+                z-index: 5;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+            }
+            .title{
+                overflow: hidden;
+                max-height: 40px;
+            }
+            .date{
+                color: white;
+                background: $main-gold;
+                text-align: center;
+                position: absolute;
+                padding: 5px 10px;
+                left: 10px;
+                top: -30px;
+                font-size: 14px;
+            }
+
+        }
+        .flex-module.highlight{
+            width: 100%;
+            .flex-desc{
+                background: $main-blue;
+                color: white;
+            }
+        }
+        .flex-module:hover{
+            img{
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+.section-container:first-child{
+    padding-top: $navbar-height;
+}
 @media only screen
     and (min-device-width: 768px)
     and (max-device-width: 1024px)

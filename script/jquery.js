@@ -44,6 +44,7 @@ var winHeight;
 
 
 function desktopGate2(){
+
     $(window).ready(function(){
         winHeight = $('.gate-init').height();
     });
