@@ -3,9 +3,10 @@ function widthController(){
         mobileInit()
     }
     else {
-        desktopGate2();
+
     }
 };
+desktopGate2();
 $('#indexSlider').slick({
     fade: true,
     arrows: false,
@@ -59,7 +60,7 @@ function desktopGate2(){
            if (st >= height) {
                 //stop
                 $('.gate').css({
-                    marginBottom: 0+'px'
+                    marginBottom: -6.5+'rem'
                 });
                 $('.gate-init').removeClass('gate-div');
            }
@@ -185,8 +186,11 @@ function mobileInit(){
         $('.nav-ul > li').find('.submenu').slideUp(300);
     });
     $('.nav-ul > li').on('click', function(){
-        $('.nav-ul > li').find('.submenu').slideUp(300);
+        // $('.nav-ul > li').find('.submenu').slideUp(300);
         $(this).find('.submenu').slideToggle(300);
+        $(this).find('.submenu li').click(function(e) {
+            e.stopPropagation();
+        });
     });
     $(".prodi-nav").mCustomScrollbar({
         axis:"x",
@@ -214,4 +218,16 @@ $('.prodi-nav .choice-module').on('click', function(){
 
     $('.right-content .content-show').removeClass('active');
     $('#prodic'+numTgt).addClass('active');
+});
+
+$(window).scroll(function() {
+    var height = $(window).scrollTop();
+
+    if(height  > 100) {
+        $('#navbar2 .top').addClass('hidden');
+    }
+    else {
+        console.log('bottom');
+        $('#navbar2 .top').removeClass('hidden');
+    }
 });

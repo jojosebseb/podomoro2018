@@ -7,8 +7,9 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-family: MyriadProRegular, Calibri;
+  font-family: 'MyriadProRegular', 'Calibri';
   outline: none !important;
+  font-size: inherit;
 }
 
 .container {
@@ -27,18 +28,26 @@ header {
   min-height: 0 !important;
 }
 
+main {
+  min-height: 63vh;
+}
+
 #navbar2 {
   position: fixed;
+  font-family: 'MyriadProRegular', 'Calibri';
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 55;
+  z-index: 55555555;
   box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 #navbar2 .top {
   background: #083f88;
   font-size: 13px;
+  transition: all .1s ease;
+  overflow: hidden;
+  max-height: 33px;
 }
 
 #navbar2 .top .container {
@@ -69,13 +78,17 @@ header {
   border-right: 0;
 }
 
+#navbar2 .top.hidden {
+  max-height: 0;
+}
+
 #navbar2 .logo-container img {
   width: 150px;
   display: block;
 }
 
 #navbar2 .bottom {
-  background: #f8f8f8;
+  background: #fff;
 }
 
 #navbar2 .bottom .container {
@@ -90,9 +103,6 @@ header {
 }
 
 #navbar2 .bottom .nav-ul > li {
-  border-left: 1px solid #083f88;
-  margin-right: -1px;
-  border-right: 1px solid #083f88;
   transition: all .1s ease;
   position: relative;
 }
@@ -107,7 +117,7 @@ header {
   color: white;
 }
 
-#navbar2 .bottom .nav-ul > li:hover .submenu {
+#navbar2 .bottom .nav-ul > li:hover .submenu, #navbar2 .bottom .nav-ul > li:hover .fakultas-menu {
   display: flex;
 }
 
@@ -151,8 +161,72 @@ header {
   align-items: center;
 }
 
+#navbar2 .bottom .fakultas-menu {
+  width: 460px;
+  display: none;
+  flex-wrap: wrap;
+  position: absolute;
+  background: white;
+  top: 100%;
+  left: 0;
+  box-shadow: 0px 5px 6px 1px rgba(0, 0, 0, 0.2);
+  align-items: flex-start;
+}
+
+#navbar2 .bottom .fakultas-menu .submenu {
+  width: 230px;
+  min-width: 230px;
+  position: relative;
+  box-shadow: none;
+  align-items: flex-start;
+  border-right: 1px solid white;
+}
+
+#navbar2 .bottom .fakultas-menu .submenu li:hover {
+  background: #083f88;
+  color: white;
+}
+
+#navbar2 .bottom .fakultas-menu .submenu a {
+  padding: 10px 15px;
+}
+
+#navbar2 .bottom .fakultas-menu .submenu:nth-child(even) {
+  border-right: 0;
+}
+
+#navbar2 .bottom .fakultas-menu .fakultas-header {
+  background: #999997;
+  color: white;
+}
+
+#navbar2 .bottom .fakultas-menu .fakultas-header a {
+  padding: 13px 15px;
+}
+
 .desktop-hide {
   display: none;
+}
+
+.page-banner {
+  background-image: none !important;
+  height: auto !important;
+  padding-top: 90px;
+}
+
+.page-banner .page-title {
+  background-color: #ffffff;
+  height: 90px;
+  padding: 25px 0px 0px;
+}
+
+.page-banner .page-title-container-padding {
+  padding-top: 0;
+}
+
+.about-achivement-space {
+  width: 100%;
+  height: 0 !important;
 }
 
 #navbarSearch {
@@ -202,6 +276,52 @@ header {
 
 #parentContainer {
   min-height: 80vh;
+}
+
+.about-mission {
+  height: auto !important;
+  padding: 40px 0;
+}
+
+.about-mission .about-mission-title {
+  padding-top: 0;
+  color: #ffffff;
+}
+
+.about-mission .about-mission-content {
+  height: auto;
+}
+
+.about-mission .about-mission-content-li {
+  visibility: visible;
+  width: 600px;
+  opacity: 1;
+  height: auto;
+  position: relative;
+  padding: 20px 0;
+  transition: none;
+}
+
+.about-mission .about-mission-bullet {
+  display: none;
+}
+
+.online-registration-div.flying-box-div {
+  background: #335582;
+  color: white;
+  position: fixed;
+  z-index: 55;
+  bottom: 0;
+  padding: 10px 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  right: 12rem;
+  border: 1px solid #ffffff17;
+  border-bottom: 0;
+}
+
+.slider-image-mobile {
+  display: none !important;
 }
 
 #indexSlider {
@@ -255,6 +375,7 @@ header {
 #indexSlider .slide-items.slick-active .slide-text {
   top: 40%;
   opacity: 1;
+  display: none;
 }
 
 #indexSlider .slide-items.slick-active .slide-text .slide-title {
@@ -265,6 +386,26 @@ header {
 #indexSlider .slide-items.slick-active .slide-text .slide-paragraph {
   top: 0;
   opacity: 1;
+}
+
+.faq-item-div {
+  padding: 0px 0 40px;
+}
+
+.faq-item-div .faq-item-title-div {
+  padding: 5px 0;
+  font-size: 18px;
+}
+
+.faq-item-div .faq-item-content-div {
+  padding-left: 21px;
+}
+
+.faq-item-div .faq-item-content-div * {
+  font-family: 'MyriadProRegular', Calibri !important;
+  font-size: 14px !important;
+  color: #333;
+  line-height: 1.5;
 }
 
 ul.slick-dots {
@@ -344,7 +485,7 @@ ul.slick-dots button {
 }
 
 #indexNews .news-module .bottom > a {
-  max-height: 40px;
+  max-height: 39px;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -500,6 +641,16 @@ ul.slick-dots button {
   font-size: 16px;
 }
 
+#indexEvents .box-button {
+  color: #083f88;
+  background: white;
+  padding: 15px 30px;
+  display: block;
+  text-align: center;
+  width: 180px;
+  margin: 30px auto 0;
+}
+
 .arrow-box {
   width: 28px;
   height: 28px;
@@ -559,7 +710,7 @@ ul.slick-dots button {
 }
 
 #indexTestimonial .flex img {
-  height: 230px;
+  width: 100%;
   margin: auto;
   display: block;
 }
@@ -683,8 +834,10 @@ ul.slick-dots button {
 }
 
 .breadcrumb {
-  opacity: 0.5;
-  padding-top: 20px;
+  padding: 20px 0;
+  font-family: Calibri;
+  font-size: 13px;
+  color: #544d4d !important;
 }
 
 .breadcrumb a:first-child {
@@ -693,7 +846,7 @@ ul.slick-dots button {
 
 .breadcrumb a {
   margin: 0 5px;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .breadcrumb a:hover {
@@ -703,7 +856,7 @@ ul.slick-dots button {
 .program-banner {
   height: 129px;
   background: none !important;
-  margin-top: 50px;
+  margin-top: 0px;
 }
 
 #prodiParent {
@@ -775,6 +928,10 @@ ul.slick-dots button {
   width: 80%;
   padding-left: 30px;
   padding-bottom: 50px;
+}
+
+#prodiParent .right-content img {
+  max-width: 100%;
 }
 
 #prodiParent .right-content .content-show {
@@ -940,7 +1097,7 @@ ul.slick-dots button {
   padding-top: 90px;
 }
 
-.overview-item-title {
+.overview-item-title, .div-title {
   padding: 10px 0;
   font-size: 20px;
   font-weight: bold;
@@ -968,13 +1125,13 @@ ul.slick-dots button {
   line-height: 1.5;
 }
 
-#prodic1 ul {
+#prodic1 ul, #prodic1 ol {
   padding-left: 20px;
   padding-top: 5px;
   padding-bottom: 10px;
 }
 
-#prodic1 li {
+#prodic1 ul li, #prodic1 ol li {
   list-style: disc;
   list-style-position: outside;
 }
@@ -1052,7 +1209,7 @@ ul.slick-dots button {
 .lecturer-ul .lecturerdetail {
   margin-right: 0;
   margin-top: 0;
-  width: 100%;
+  width: 60%;
   padding: 15px;
   display: flex;
   flex-wrap: wrap;
@@ -1164,6 +1321,7 @@ ul.slick-dots button {
   background: white;
   position: relative;
   overflow: hidden;
+  min-height: 337px;
 }
 
 #agendaSection .flex .flex-module img {
@@ -1185,7 +1343,7 @@ ul.slick-dots button {
 
 #agendaSection .flex .flex-module .title {
   overflow: hidden;
-  max-height: 40px;
+  max-height: 39px;
 }
 
 #agendaSection .flex .flex-module .date {
@@ -1209,6 +1367,12 @@ ul.slick-dots button {
 
 #agendaSection .flex .flex-module:hover img {
   transform: scale(1.05);
+}
+
+.video-selected-title {
+  /* font-weight: bold; */
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 .search-button {
@@ -1247,6 +1411,10 @@ ul.slick-dots button {
 #footer .footer-module {
   padding: 0 20px;
   max-width: 30%;
+}
+
+#footer .footer-module > img {
+  margin-bottom: 20px;
 }
 
 #footer .footer-module form {
@@ -1292,6 +1460,32 @@ ul.slick-dots button {
   text-align: center;
   width: 100%;
   padding: 30px 0;
+}
+
+.registration-paragraph * {
+  font-size: 16px !important;
+  font-family: 'MyriadProRegular' !important;
+  font-weight: normal;
+  text-align: left !important;
+}
+
+.registration-paragraph a {
+  color: #083f88;
+  text-decoration: underline;
+}
+
+.registration-paragraph ul {
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.registration-paragraph ol {
+  list-style: default;
+}
+
+.registration-paragraph li {
+  list-style: decimal;
+  padding: 5px 0;
 }
 
 .gate {
